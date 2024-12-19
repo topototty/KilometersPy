@@ -1,0 +1,516 @@
+{% load static %}
+
+
+<div class="container mt-5" id="order-form-container">
+
+    <!-- Контейнер для карты -->
+    <div id="map"></div>
+
+    <form id="orderForm" class="p-3 border rounded w-50" method="post" data-url="{% url 'create_order' %}">
+        {% csrf_token %}
+
+        <input type="hidden" name="selected_vehicle_id" id="selected_vehicle_id" value="">
+        <input type="hidden" name="payment_done" id="payment_done" value="0">
+        <input type="hidden" name="origin_coordinates" id="origin_coordinates" value="">
+        <input type="hidden" name="destination_coordinates" id="destination_coordinates" value="">
+
+        <!-- Шаг 1: Адреса -->
+        <div class="step" id="step-1">
+            <h3 class="mb-3">Адреса</h3>
+
+            <div class="mb-3">
+                <label for="origin_address" class="form-label">Адрес отправления</label>
+                <input type="text" class="form-control" name="origin_address" id="origin_address" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="destination_address" class="form-label">Адрес доставки</label>
+                <input type="text" class="form-control" name="destination_address" id="destination_address" required>
+            </div>
+        </div>
+
+        <!-- Шаг 2: Параметры груза и выбор ТС -->
+        <div class="step" id="step-2" style="display:none;">
+            <h3 class="mb-3">Параметры груза</h3>
+
+            <div class="mb-3">
+                <label for="cargo_width" class="form-label">Ширина груза (м)</label>
+                <input type="number" step="0.01" min="0.01" class="form-control" name="cargo_width" id="cargo_width" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="cargo_length" class="form-label">Длина груза (м)</label>
+                <input type="number" step="0.01" min="0.01" class="form-control" name="cargo_length" id="cargo_length" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="cargo_weight" class="form-label">Вес груза (кг)</label>
+                <input type="number" step="0.01" min="0.01" class="form-control" name="cargo_weight" id="cargo_weight" required>
+            </div>
+
+            <h4 class="mt-4">Выберите тип транспортного средства</h4>
+            <div class="row">
+                {% for vehicle in vehicle_types %}
+                <div class="col-md-6 mb-3 w-50">
+                    <button 
+                        type="button" 
+                        class="btn btn-outline-primary w-100 text-start vehicle-option p-3"
+                        style="height: 150px; display: flex; align-items: center;"
+                        data-id="{{ vehicle.pk }}"
+                        data-max-length="{{ vehicle.max_length }}"
+                        data-max-width="{{ vehicle.max_width }}"
+                        data-max-weight="{{ vehicle.max_weight }}"
+                        data-price="{{ vehicle.price }}">
+                        <div class="me-3">
+                            {% if vehicle.image %}
+                            <img src="{{ vehicle.image.url }}" alt="{{ vehicle.name }}" style="width: 100px; height: auto;">
+                            {% else %}
+                            <div class="text-muted" style="width: 100px; text-align: center;">Нет изображения</div>
+                            {% endif %}
+                        </div>
+                        <div>
+                            <h5 class="mb-1">{{ vehicle.name }}</h5>
+                            <p class="mb-0">{{ vehicle.max_weight }} кг <br> <strong>От {{ vehicle.price }} ₽</strong></p>
+                        </div>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+        <!-- Шаг 3: Тип груза, описание, время доставки -->
+        <div class="step" id="step-3" style="display:none;">
+            <h3 class="mb-3">Детали груза</h3>
+
+            <div class="mb-3">
+                <label for="cargo_type" class="form-label">Тип груза</label>
+                <select class="form-select" name="cargo_type" id="cargo_type" required>
+                    <option value="" selected disabled>Выберите тип груза</option>
+                    {% for ct in cargo_types %}
+                        <option value="{{ ct.pk }}">{{ ct.name }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="cargo_description" class="form-label">Описание груза</label>
+                <textarea class="form-control" name="cargo_description" id="cargo_description" rows="3" required></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="delivery_date" class="form-label">Дата доставки</label>
+                <input type="date" class="form-control" name="delivery_date" id="delivery_date" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="delivery_time" class="form-label">Время доставки</label>
+                <input type="time" class="form-control" name="delivery_time" id="delivery_time" required>
+            </div>
+        </div>
+
+        <!-- Шаг 4: Оплата -->
+        <div class="step" id="step-4" style="display:none;">
+            <h3 class="mb-3">Оплата</h3>
+            <p class="mb-3">Конечная сумма: <span id="finalPrice">—</span> ₽</p>
+            <div class="mb-3">
+                <label for="card_number" class="form-label">Номер карты</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="card_number" 
+                    id="card_number" 
+                    placeholder="0000 0000 0000 0000" 
+                    pattern="\d{4} \d{4} \d{4} \d{4}" 
+                    title="Введите номер карты в формате 0000 0000 0000 0000" 
+                    required>
+                <div class="invalid-feedback">Введите корректный номер карты в формате 0000 0000 0000 0000.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="card_expiry" class="form-label">Срок действия (MM/YY)</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="card_expiry" 
+                    id="card_expiry" 
+                    placeholder="MM/YY" 
+                    pattern="(0[1-9]|1[0-2])\/\d{2}" 
+                    title="Введите срок действия в формате MM/YY" 
+                    required>
+                <div class="invalid-feedback">Введите корректный срок действия в формате MM/YY.</div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="card_cvc" class="form-label">CVC</label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    name="card_cvc" 
+                    id="card_cvc" 
+                    placeholder="000" 
+                    pattern="\d{3}" 
+                    title="Введите CVC в формате 000" 
+                    required>
+                <div class="invalid-feedback">Введите корректный CVC в формате 000.</div>
+            </div>
+            
+
+            {% if not request.user.is_authenticated %}
+            <a href="{% url 'reg' %}" id="registerButton" class="btn btn-outline-secondary">Зарегистрироваться</a>
+            {% else %}
+            <button type="submit" id="submitButton" class="btn btn-success" style="display: none;">Оплатить</button>
+            {% endif %}
+        </div>
+
+        <div class="mt-4 d-flex justify-content-between">
+            <button type="button" id="prevButton" class="btn btn-outline-primary" disabled>Назад</button>
+            <button type="button" id="nextButton" class="btn btn-primary">Вперед</button>
+        </div>
+        <div id="error-message-container" class="alert alert-danger mt-3" style="display: none;">
+            <span id="error-message"></span>
+        </div>
+
+    </form>
+</div>
+
+<!-- Уведомление об успешном заказе -->
+<div id="order-success-container" class="mt-5" style="display: none;">
+    <h1>Заказ успешно создан и оплачен!</h1>
+    <p>Номер заказа: <strong id="orderId"></strong></p>
+    <p>Адрес отправления: <span id="originAddress"></span></p>
+    <p>Адрес доставки: <span id="destinationAddress"></span></p>
+    <p>Сумма: <span id="orderPrice"></span> ₽</p>
+    <a href="/" class="btn btn-primary mt-3">Вернуться на главную</a>
+</div>
+
+
+<!-- Подключите стили и скрипты Leaflet и Routing Machine до данного скрипта -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/imask"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Маска для номера карты
+    const cardNumberInput = document.getElementById('card_number');
+    if (cardNumberInput) {
+        IMask(cardNumberInput, {
+            mask: '0000 0000 0000 0000', // Маска для 16 цифр
+            lazy:false
+        });
+    }
+
+    // Маска для срока действия карты
+    const cardExpiryInput = document.getElementById('card_expiry');
+    if (cardExpiryInput) {
+        IMask(cardExpiryInput, {
+            mask: 'MM/YY',
+            blocks: {
+                MM: {
+                    mask: IMask.MaskedRange,
+                    from: 1,
+                    to: 12,
+                },
+                YY: {
+                    mask: IMask.MaskedRange,
+                    from: 0,
+                    to: 99,
+                },
+            },
+            lazy:false
+        });
+    }
+
+    // Маска для CVC
+    const cardCVCInput = document.getElementById('card_cvc');
+    if (cardCVCInput) {
+        IMask(cardCVCInput, {
+            mask: '000', // Маска для 3 цифр
+            lazy:false
+        });
+    }
+});
+
+</script>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // -------------------------------
+        // ИНИЦИАЛИЗАЦИЯ КАРТЫ И МАРШРУТА
+        // -------------------------------
+        var map = L.map('map').setView([55.7558, 37.6173], 10); // Координаты Москвы как пример
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+    
+        var firstMarker = null;
+        var secondMarker = null;
+        var routingControl = null;
+    
+        // Функция для получения адреса с помощью Яндекс Геокодера
+        function getAddress(lat, lng, callback) {
+            var apiKey = 'ff7d7894-876d-4d74-9c50-609076c5a089'; // Ваш API-ключ
+            var url = `https://geocode-maps.yandex.ru/1.x/?apikey=${apiKey}&format=json&geocode=${lng},${lat}`;
+    
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.response.GeoObjectCollection.featureMember.length > 0) {
+                        var geoObject = data.response.GeoObjectCollection.featureMember[0].GeoObject;
+                        var address = geoObject.metaDataProperty.GeocoderMetaData.text;
+                        callback(address);
+                    } else {
+                        callback("Не удалось определить адрес");
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка геокодирования:', error);
+                    callback("Ошибка определения адреса");
+                });
+        }
+    
+        map.on('click', function(e) {
+            if (!firstMarker) {
+                // Первая точка: Адрес отправления
+                firstMarker = L.marker(e.latlng).addTo(map);
+                document.getElementById('origin_coordinates').value = `${e.latlng.lat.toFixed(6)},${e.latlng.lng.toFixed(6)}`;
+                getAddress(e.latlng.lat, e.latlng.lng, function(address) {
+                    document.getElementById('origin_address').value = address; // Подставляем адрес
+                });
+            } else if (!secondMarker) {
+                // Вторая точка: Адрес доставки
+                secondMarker = L.marker(e.latlng).addTo(map);
+    
+                // Строим маршрут между первой и второй точками
+                routingControl = L.Routing.control({
+                    waypoints: [
+                        firstMarker.getLatLng(),
+                        secondMarker.getLatLng()
+                    ],
+                    lineOptions: {
+                        styles: [{color: 'blue', opacity: 0.6, weight: 4}]
+                    },
+                    createMarker: function(i, waypoint, n) {
+                        return L.marker(waypoint.latLng, {
+                            draggable: false
+                        });
+                    }
+                }).addTo(map);
+                document.getElementById('destination_coordinates').value = `${e.latlng.lat.toFixed(6)},${e.latlng.lng.toFixed(6)}`;
+                getAddress(e.latlng.lat, e.latlng.lng, function(address) {
+                    document.getElementById('destination_address').value = address; // Подставляем адрес
+                });
+            } else {
+                // Сбрасываем точки, если кликнуть третий раз
+                if (routingControl) {
+                    map.removeControl(routingControl);
+                }
+                if (firstMarker) {
+                    map.removeLayer(firstMarker);
+                    firstMarker = null;
+                }
+                if (secondMarker) {
+                    map.removeLayer(secondMarker);
+                    secondMarker = null;
+                }
+            }
+        });
+    
+        // -------------------------------
+        // ЛОГИКА ШАГОВ ФОРМЫ И ОТПРАВКИ
+        // -------------------------------
+        const form = document.getElementById("orderForm");
+        const orderFormContainer = document.getElementById("order-form-container");
+        const orderSuccessContainer = document.getElementById("order-success-container");
+        const errorMessageContainer = document.getElementById("error-message-container");
+        const errorMessage = document.getElementById("error-message");
+    
+        const steps = document.querySelectorAll('.step');
+        let currentStep = 0;
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const submitButton = document.getElementById('submitButton');
+    
+        const vehicleButtons = document.querySelectorAll('.vehicle-option');
+        const selectedVehicleInput = document.getElementById('selected_vehicle_id');
+        const finalPriceElement = document.getElementById('finalPrice');
+    
+        const cargoWidthInput = document.getElementById('cargo_width');
+        const cargoLengthInput = document.getElementById('cargo_length');
+        const cargoWeightInput = document.getElementById('cargo_weight');
+    
+        function showError(message) {
+            errorMessage.textContent = message;
+            errorMessageContainer.style.display = "block";
+        }
+    
+        function hideError() {
+            errorMessageContainer.style.display = "none";
+        }
+    
+        function getCSRFToken() {
+            const csrfInput = document.querySelector('input[name="csrfmiddlewaretoken"]');
+            if (csrfInput) {
+                return csrfInput.value;
+            }
+            console.error("CSRF токен не найден.");
+            return null;
+        }
+    
+        function validateVehicles() {
+            const width = parseFloat(cargoWidthInput.value) || 0;
+            const length = parseFloat(cargoLengthInput.value) || 0;
+            const weight = parseFloat(cargoWeightInput.value) || 0;
+    
+            vehicleButtons.forEach(btn => {
+                const maxLength = parseFloat(btn.dataset.maxLength);
+                const maxWidth = parseFloat(btn.dataset.maxWidth);
+                const maxWeight = parseFloat(btn.dataset.maxWeight);
+    
+                if (width > maxWidth || length > maxLength || weight > maxWeight) {
+                    btn.disabled = true;
+                    btn.classList.add('disabled', 'text-muted');
+                    btn.classList.remove('btn-outline-primary');
+                } else {
+                    btn.disabled = false;
+                    btn.classList.remove('disabled', 'text-muted');
+                    btn.classList.add('btn-outline-primary');
+                }
+            });
+        }
+    
+        function calculateFinalPrice() {
+            const selectedVehicle = Array.from(vehicleButtons).find(btn => btn.classList.contains('active'));
+            if (selectedVehicle) {
+                const price = parseFloat(selectedVehicle.dataset.price);
+                finalPriceElement.textContent = price.toFixed(2);
+            } else {
+                finalPriceElement.textContent = '0';
+            }
+        }
+    
+        cargoWidthInput.addEventListener('input', validateVehicles);
+        cargoLengthInput.addEventListener('input', validateVehicles);
+        cargoWeightInput.addEventListener('input', validateVehicles);
+    
+        vehicleButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (btn.disabled) return;
+    
+                vehicleButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                selectedVehicleInput.value = btn.dataset.id;
+    
+                calculateFinalPrice();
+            });
+        });
+    
+        function showStep(index) {
+            steps.forEach((step, i) => {
+                step.style.display = i === index ? 'block' : 'none';
+            });
+    
+            prevButton.disabled = index === 0;
+            if (index === steps.length - 1) {
+                nextButton.style.display = 'none';
+                submitButton.style.display = 'inline-block';
+                calculateFinalPrice();
+            } else {
+                nextButton.style.display = 'inline-block';
+                submitButton.style.display = 'none';
+            }
+        }
+    
+        function canGoNext() {
+            hideError();
+            if (currentStep === 0) {
+                const origin = document.getElementById('origin_address').value.trim();
+                const dest = document.getElementById('destination_address').value.trim();
+                if (!origin || !dest) {
+                    showError('Заполните адреса');
+                    return false;
+                }
+            }
+    
+            if (currentStep === 1) {
+                if (!selectedVehicleInput.value) {
+                    showError('Выберите подходящее транспортное средство');
+                    return false;
+                }
+            }
+    
+            if (currentStep === 2) {
+                const cargoType = document.getElementById('cargo_type').value;
+                const cargoDesc = document.getElementById('cargo_description').value.trim();
+                const deliveryDate = document.getElementById('delivery_date').value;
+                const deliveryTime = document.getElementById('delivery_time').value;
+                if (!cargoType || !cargoDesc || !deliveryDate || !deliveryTime) {
+                    showError('Заполните все поля на этом шаге');
+                    return false;
+                }
+            }
+    
+            return true;
+        }
+    
+        nextButton.addEventListener('click', () => {
+            if (canGoNext()) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        });
+    
+        prevButton.addEventListener('click', () => {
+            currentStep--;
+            showStep(currentStep);
+        });
+    
+        showStep(currentStep);
+    
+        // Отправка формы
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            hideError();
+    
+            const formData = new FormData(form);
+            const url = form.dataset.url;
+    
+            fetch(url, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "X-Requested-With": "XMLHttpRequest",
+                    "X-CSRFToken": getCSRFToken(),
+                },
+            })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error(`Ошибка сервера: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then((data) => {
+                if (data.success) {
+                    orderFormContainer.style.display = "none";
+                    document.getElementById("orderId").textContent = data.order_id;
+                    document.getElementById("originAddress").textContent = data.origin_address;
+                    document.getElementById("destinationAddress").textContent = data.destination_address;
+                    document.getElementById("orderPrice").textContent = data.price;
+                    orderSuccessContainer.style.display = "block";
+                } else {
+                    showError(data.message);
+                }
+            })
+            .catch((error) => {
+                console.error("Ошибка:", error);
+                showError("Произошла ошибка при создании заказа.");
+            });
+        });
+    });
+    </script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>

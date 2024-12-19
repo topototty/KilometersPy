@@ -1,0 +1,12 @@
+{% extends 'inc/base.html' %}
+
+{% block title %}Статистика заказов{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Статистика заказов по дням</h2>
+    <div class="chart-container mt-4">
+        <img src="data:image/png;base64,{{ chart }}" alt="График количества заказов">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,54 @@
+.bg-custom {
+    background-color: #0035e7;
+}
+
+.text-section {
+    max-width: 500px;
+    text-align: start;
+}
+
+/* Линия под текстом */
+.custom-line {
+    border: none;
+    border-top: 1px solid white;
+    width: 100%;
+    margin: 1rem auto;
+}
+
+/* Секция формы */
+.form-section {
+    max-width: 300px;
+    width: 100%;
+}
+
+/* Поля ввода */
+.custom-input {
+    border: 1px solid #0035e7;
+    border-radius: 8px;
+    height: 50px;
+    font-size: 16px;
+    padding: 10px 15px;
+    box-shadow: none;
+    width: 100%;
+    max-width: 500px;
+}
+
+/* Фокус на полях ввода */
+.custom-input:focus {
+    border-color: #0035e7;
+    box-shadow: 0 0 5px rgba(0, 53, 231, 0.5);
+}
+
+/* Кнопка отправки */
+.custom-button {
+    background-color: #0035e7;
+    border: none;
+    height: 50px;
+    font-size: 18px;
+    border-radius: 8px;
+    color: white;
+}
+
+.custom-button:hover {
+    background-color: #002bb5;
+}

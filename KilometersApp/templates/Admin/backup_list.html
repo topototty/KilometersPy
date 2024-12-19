@@ -1,0 +1,67 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block title %}Управление бэкапами{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Управление бэкапами</h2>
+
+    <!-- Отображение сообщений -->
+    {% if messages %}
+    <div aria-live="polite" aria-atomic="true" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <div id="toast-container">
+            {% for message in messages %}
+                <div class="toast align-items-center text-bg-{{ message.tags|default:'info' }} border-0 mb-2" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">
+                            {{ message }}
+                        </div>
+                        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Закрыть"></button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Кнопка для создания бэкапа -->
+    <form method="post" action="{% url 'backup_create' %}" class="mb-3">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-save"></i> Создать бэкап
+        </button>
+    </form>
+
+    <!-- Таблица с бэкапами -->
+    <table class="table table-bordered mt-4">
+        <thead>
+            <tr>
+                <th>Имя файла</th>
+                <th>Действия</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for file in backup_files %}
+            <tr>
+                <td>{{ file }}</td>
+                <td>
+                    <form method="post" action="{% url 'backup_restore' file %}" class="d-inline">
+                        {% csrf_token %}
+                        <button class="btn btn-success btn-sm">Восстановить</button>
+                    </form>
+                    <form method="post" action="{% url 'backup_delete' file %}" class="d-inline">
+                        {% csrf_token %}
+                        <button class="btn btn-danger btn-sm">Удалить</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2" class="text-center">Бэкапы отсутствуют</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

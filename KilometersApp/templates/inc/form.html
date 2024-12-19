@@ -1,0 +1,67 @@
+{% extends 'inc/base.html' %}
+
+{% load static %}
+{% block content %}
+<div class="container mb-5">
+    <h1>{{ title }}</h1>
+
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="mb-3">
+                <label for="{{ field.id_for_label }}" class="form-label">{{ field.label }}</label>
+                {{ field }}
+                {% if field.help_text %}
+                    <small class="form-text text-muted">{{ field.help_text }}</small>
+                {% endif %}
+                {% if field.errors %}
+                    <div class="text-danger">
+                        {{ field.errors }}
+                    </div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+            {% if object.get_list_url %}
+            <a href="javascript:history.back()" class="btn btn-secondary">Отмена</a>
+            {% else %}
+            <a href="javascript:history.back()" class="btn btn-secondary">Отмена</a>
+            {% endif %}
+        </div>
+    </form>   
+</div>
+<script src="https://unpkg.com/imask"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Для номера телефона
+        const phoneInput = document.querySelector('#phone');
+        if (phoneInput) {
+            console.log('Инициализация маски для номера телефона');
+            IMask(phoneInput, {
+                mask: '+{7}-000-000-00-00',
+                lazy: false
+            });
+        } else {
+            console.error('Элемент #phone не найден');
+        }
+
+        // Для госномера
+        const licensePlateInput = document.querySelector('#license_plate');
+        if (licensePlateInput) {
+            console.log('Инициализация маски для госномера');
+            IMask(licensePlateInput, {
+                mask: 'a000aa',
+                lazy: false
+            });
+        } else {
+            console.error('Элемент #license_plate не найден');
+        }
+    });
+</script>
+
+
+
+{% endblock %}

@@ -1,0 +1,5092 @@
+[
+{
+  "model": "KilometersApp.profile",
+  "pk": 4,
+  "fields": {
+    "user": 5,
+    "encrypted_phone": "gAAAAABnW1w5UqIpfZcGjN5ukWiTSNEf5Ch2JzX-Ibl8CdFDdUcI8IJsmHXOEuS-ZeVH7oedEsbjdRE1oUSkXD7WYnwYznu9ntyshK-c06rKp8dy4KL8hKg=",
+    "is_deleted": false
+  }
+},
+{
+  "model": "KilometersApp.profile",
+  "pk": 5,
+  "fields": {
+    "user": 6,
+    "encrypted_phone": "gAAAAABnW1zGmIgUJZVgOUbN6oiB8H-MuRHyyAYvum0flPsnInd_HmLdzF8aGd_HmkzE2sGMEjLyFAVnwu9J_P3ajnFTsKgr8WsmkVpBQrZGhWb7PoZyNug=",
+    "is_deleted": false
+  }
+},
+{
+  "model": "KilometersApp.profile",
+  "pk": 7,
+  "fields": {
+    "user": 12,
+    "encrypted_phone": "gAAAAABnXe9Uh9jDTntosa6xFhPE7SHiCUbitVx9B9RArqxiu3s-Dbjgz1-6OfevdQ5OeiwtalqgjQRuvge50KZLXG9KOqdYlqlia53i1uZO2TMJtYEm2nM=",
+    "is_deleted": false
+  }
+},
+{
+  "model": "KilometersApp.check",
+  "pk": 13,
+  "fields": {
+    "order": 13,
+    "user_id": 5,
+    "decimal": "2800.00",
+    "date": "2024-12-14",
+    "time": "20:58:30.749"
+  }
+},
+{
+  "model": "KilometersApp.check",
+  "pk": 14,
+  "fields": {
+    "order": 14,
+    "user_id": 5,
+    "decimal": "2800.00",
+    "date": "2024-12-14",
+    "time": "21:02:15.875"
+  }
+},
+{
+  "model": "KilometersApp.check",
+  "pk": 15,
+  "fields": {
+    "order": 15,
+    "user_id": 5,
+    "decimal": "2800.00",
+    "date": "2024-12-14",
+    "time": "21:19:01.784"
+  }
+},
+{
+  "model": "KilometersApp.check",
+  "pk": 16,
+  "fields": {
+    "order": 16,
+    "user_id": 5,
+    "decimal": "3000.00",
+    "date": "2024-12-14",
+    "time": "21:20:02.433"
+  }
+},
+{
+  "model": "KilometersApp.order",
+  "pk": 13,
+  "fields": {
+    "order_number": "2849892",
+    "cargo_width": "1.00",
+    "cargo_length": "1.00",
+    "cargo_weight": "0.20",
+    "cargo_description": "описание1",
+    "origin_address": "Россия, Московская область, Одинцовский городской округ, территориальное управление Назарьевское",
+    "destination_address": "Россия, Москва, Красноказарменная улица, 23",
+    "origin_coordinates": "55.662095,37.056061",
+    "destination_coordinates": "55.753395,37.712494",
+    "delivery_date": "2024-12-15",
+    "delivery_time": "12:00:00",
+    "user_id": 5,
+    "cargo_type": 4,
+    "vehicle_type": 1,
+    "order_status": 2
+  }
+},
+{
+  "model": "KilometersApp.order",
+  "pk": 14,
+  "fields": {
+    "order_number": "7328427",
+    "cargo_width": "1.00",
+    "cargo_length": "1.00",
+    "cargo_weight": "200.00",
+    "cargo_description": "fghjklkjhg",
+    "origin_address": "Россия, Москва, пруд Раменки",
+    "destination_address": "Россия, Москва, Слободской переулок, 6с3",
+    "origin_coordinates": "55.695390,37.490021",
+    "destination_coordinates": "55.758804,37.682281",
+    "delivery_date": "2024-12-15",
+    "delivery_time": "12:00:00",
+    "user_id": 5,
+    "cargo_type": 4,
+    "vehicle_type": 1,
+    "order_status": 4
+  }
+},
+{
+  "model": "KilometersApp.order",
+  "pk": 15,
+  "fields": {
+    "order_number": "8570598",
+    "cargo_width": "1.00",
+    "cargo_length": "1.00",
+    "cargo_weight": "200.00",
+    "cargo_description": "описание",
+    "origin_address": "Россия, Москва, Новомосковский административный округ, район Коммунарка, квартал № 47",
+    "destination_address": "Россия, Москва, Волжский бульвар, 27к3",
+    "origin_coordinates": "55.536403,37.456238",
+    "destination_coordinates": "55.703903,37.752869",
+    "delivery_date": "2024-12-16",
+    "delivery_time": "16:00:00",
+    "user_id": 5,
+    "cargo_type": 4,
+    "vehicle_type": 1,
+    "order_status": 7
+  }
+},
+{
+  "model": "KilometersApp.order",
+  "pk": 16,
+  "fields": {
+    "order_number": "2021991",
+    "cargo_width": "1.00",
+    "cargo_length": "1.00",
+    "cargo_weight": "350.00",
+    "cargo_description": "опинсие",
+    "origin_address": "Россия, Москва, Кременчугская улица",
+    "destination_address": "Россия, Москва, Юго-Восточный административный округ, район Печатники, микрорайон Курьяново",
+    "origin_coordinates": "55.721851,37.461662",
+    "destination_coordinates": "55.658221,37.675415",
+    "delivery_date": "2024-12-16",
+    "delivery_time": "14:00:00",
+    "user_id": 5,
+    "cargo_type": 4,
+    "vehicle_type": 2,
+    "order_status": 7
+  }
+},
+{
+  "model": "KilometersApp.cargotype",
+  "pk": 2,
+  "fields": {
+    "name": "буквы"
+  }
+},
+{
+  "model": "KilometersApp.cargotype",
+  "pk": 4,
+  "fields": {
+    "name": "новыйочень"
+  }
+},
+{
+  "model": "KilometersApp.cargotype",
+  "pk": 5,
+  "fields": {
+    "name": "Новый тип груза"
+  }
+},
+{
+  "model": "KilometersApp.orderstatus",
+  "pk": 2,
+  "fields": {
+    "name": "Доставлен"
+  }
+},
+{
+  "model": "KilometersApp.orderstatus",
+  "pk": 3,
+  "fields": {
+    "name": "Доставляется"
+  }
+},
+{
+  "model": "KilometersApp.orderstatus",
+  "pk": 4,
+  "fields": {
+    "name": "Отменен"
+  }
+},
+{
+  "model": "KilometersApp.orderstatus",
+  "pk": 7,
+  "fields": {
+    "name": "Ожидание"
+  }
+},
+{
+  "model": "KilometersApp.route",
+  "pk": 11,
+  "fields": {
+    "route_number": "123412",
+    "order_id": 13,
+    "driver_id": 3,
+    "vehicle_id": 1
+  }
+},
+{
+  "model": "KilometersApp.route",
+  "pk": 12,
+  "fields": {
+    "route_number": "124121",
+    "order_id": 14,
+    "driver_id": 3,
+    "vehicle_id": 1
+  }
+},
+{
+  "model": "KilometersApp.driver",
+  "pk": 3,
+  "fields": {
+    "user_id": 12,
+    "drivers_license_number": "2251156725",
+    "date_of_issue_of_drivers_license": "2022-11-29",
+    "expiration_date_of_drivers_license": "2034-11-29",
+    "driving_experience": 2,
+    "license_categories": [
+      1,
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "KilometersApp.driverslicensecategorytype",
+  "pk": 1,
+  "fields": {
+    "name": "СЕ",
+    "description": "Грузовые автомобили с прицепом"
+  }
+},
+{
+  "model": "KilometersApp.driverslicensecategorytype",
+  "pk": 2,
+  "fields": {
+    "name": "С",
+    "description": "Грузовые автомобили (от 3,5 тонн)"
+  }
+},
+{
+  "model": "KilometersApp.driverslicensecategorytype",
+  "pk": 3,
+  "fields": {
+    "name": "С1",
+    "description": "Средние грузовые автомобили (до 7,5 тонн)"
+  }
+},
+{
+  "model": "KilometersApp.driverslicensecategorytype",
+  "pk": 4,
+  "fields": {
+    "name": "С1Е",
+    "description": "Средние грузовые автомобили с прицепом"
+  }
+},
+{
+  "model": "KilometersApp.driverslicensecategorytype",
+  "pk": 5,
+  "fields": {
+    "name": "В",
+    "description": "Легковые авто и небольшие грузовые автомобили (до 3,5 тонн)"
+  }
+},
+{
+  "model": "KilometersApp.vehicle",
+  "pk": 1,
+  "fields": {
+    "brand": "Мерседес",
+    "license_plate": "А121ЕО",
+    "year_of_production": 2023,
+    "mileage": 10000,
+    "vehicle_status": 2,
+    "trailer_id": null,
+    "vehicle_type_id": 1
+  }
+},
+{
+  "model": "KilometersApp.vehiclestatus",
+  "pk": 1,
+  "fields": {
+    "status": "На ТО"
+  }
+},
+{
+  "model": "KilometersApp.vehiclestatus",
+  "pk": 2,
+  "fields": {
+    "status": "Активный"
+  }
+},
+{
+  "model": "KilometersApp.vehiclestatus",
+  "pk": 3,
+  "fields": {
+    "status": "Новый статус"
+  }
+},
+{
+  "model": "KilometersApp.vehicletype",
+  "pk": 1,
+  "fields": {
+    "name": "Фургон",
+    "max_length": "2.80",
+    "max_width": "1.80",
+    "max_weight": "1000.00",
+    "price": "2800.00",
+    "image": "vehicle_images/photo_1_2024-12-09_10-05-59.jpg"
+  }
+},
+{
+  "model": "KilometersApp.vehicletype",
+  "pk": 2,
+  "fields": {
+    "name": "Газель",
+    "max_length": "3.00",
+    "max_width": "1.95",
+    "max_weight": "1500.00",
+    "price": "3000.00",
+    "image": "vehicle_images/photo_3_2024-12-09_10-05-59.jpg"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Created Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:16:14.627Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 2,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Updated Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:16:27.208Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 3,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Created Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:16:43.446Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 4,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Updated Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:16:52.784Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 5,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "2",
+    "action": "Created Тип груза with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:17:09.581Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 6,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "3",
+    "action": "Created Тип груза with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:17:32.312Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 7,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Updated Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:17:34.410Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 8,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "2",
+    "action": "Updated Тип груза with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:17:34.412Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 9,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Created Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:17:48.827Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 10,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "2",
+    "action": "Updated Тип груза with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:17:48.830Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 11,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "4",
+    "action": "Created Тип груза with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:18:18.084Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 12,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Created Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:18:21.395Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 13,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "2",
+    "action": "Created Тип груза with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:18:21.399Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 14,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "1",
+    "action": "Updated группа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:27:20.668Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 15,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "6",
+    "action": "Created запись в журнале with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:27:20.677Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 16,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "1",
+    "action": "Updated группа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:29:41.441Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 17,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "7",
+    "action": "Created запись в журнале with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:29:41.446Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 18,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "1",
+    "action": "Updated группа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:31:07.801Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 19,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "8",
+    "action": "Created запись в журнале with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:31:07.808Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 20,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "1",
+    "action": "Updated группа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:31:35.681Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 21,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "9",
+    "action": "Created запись в журнале with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:31:35.689Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 22,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:31:39.807Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 23,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "2",
+    "action": "Created пользователь with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:03.418Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 24,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "2",
+    "action": "Updated пользователь with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:03.422Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 25,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "1",
+    "action": "Created Профиль with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:03.432Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 26,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "1",
+    "action": "Updated Профиль with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:03.445Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 27,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "2",
+    "action": "Пользователь adminka вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:03.451Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 28,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "2",
+    "action": "Updated пользователь with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:03.454Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 29,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "2",
+    "action": "Пользователь adminka вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:06.099Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 30,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:10.307Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 31,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:10.311Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 32,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "2",
+    "action": "Updated пользователь with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:31.311Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 33,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "1",
+    "action": "Updated Профиль with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:31.329Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 34,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:34.131Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 35,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "2",
+    "action": "Пользователь adminka вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:38.617Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 36,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "2",
+    "action": "Updated пользователь with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:32:38.621Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 37,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "2",
+    "action": "Пользователь adminka вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:40:13.524Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 38,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:40:29.083Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 39,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:40:29.087Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 40,
+  "fields": {
+    "user": null,
+    "model_name": "Тип ТС",
+    "object_id": "1",
+    "action": "Created Тип ТС with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:41:32.760Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 41,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "10",
+    "action": "Created запись в журнале with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:41:32.765Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 42,
+  "fields": {
+    "user": null,
+    "model_name": "Тип ТС",
+    "object_id": "1",
+    "action": "Updated Тип ТС with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:41:50.027Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 43,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "11",
+    "action": "Created запись в журнале with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:41:50.030Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 44,
+  "fields": {
+    "user": null,
+    "model_name": "Тип ТС",
+    "object_id": "2",
+    "action": "Created Тип ТС with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:20.899Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 45,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "12",
+    "action": "Created запись в журнале with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:20.903Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 46,
+  "fields": {
+    "user": null,
+    "model_name": "Тип ТС",
+    "object_id": "2",
+    "action": "Updated Тип ТС with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:44.362Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 47,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "13",
+    "action": "Created запись в журнале with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:44.366Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 48,
+  "fields": {
+    "user": null,
+    "model_name": "Статус ТС",
+    "object_id": "1",
+    "action": "Created Статус ТС with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:53.256Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 49,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "14",
+    "action": "Created запись в журнале with ID 14",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:53.259Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 50,
+  "fields": {
+    "user": null,
+    "model_name": "Статус ТС",
+    "object_id": "2",
+    "action": "Created Статус ТС with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:59.933Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 51,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "15",
+    "action": "Created запись в журнале with ID 15",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:42:59.936Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 52,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "1",
+    "action": "Created Статус заказа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:43:09.546Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 53,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "16",
+    "action": "Created запись в журнале with ID 16",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:43:09.549Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 54,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "2",
+    "action": "Created Статус заказа with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:43:53.416Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 55,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "17",
+    "action": "Created запись в журнале with ID 17",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:43:53.420Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 56,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "3",
+    "action": "Created Статус заказа with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:43:59.944Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 57,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "18",
+    "action": "Created запись в журнале with ID 18",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:43:59.948Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 58,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "4",
+    "action": "Created Статус заказа with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:03.213Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 59,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "19",
+    "action": "Created запись в журнале with ID 19",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:03.217Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 60,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "1",
+    "action": "Created Категория ВУ with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:34.404Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 61,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "20",
+    "action": "Created запись в журнале with ID 20",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:34.407Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 62,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "2",
+    "action": "Created Категория ВУ with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:47.820Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 63,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "21",
+    "action": "Created запись в журнале with ID 21",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:47.824Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 64,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "3",
+    "action": "Created Категория ВУ with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:57.958Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 65,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "22",
+    "action": "Created запись в журнале with ID 22",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:44:57.962Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 66,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "4",
+    "action": "Created Категория ВУ with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:45:07.275Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 67,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "23",
+    "action": "Created запись в журнале with ID 23",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:45:07.279Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 68,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "5",
+    "action": "Created Категория ВУ with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:45:16.430Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 69,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "24",
+    "action": "Created запись в журнале with ID 24",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:45:16.434Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 70,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "3",
+    "action": "Created пользователь with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:02.441Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 71,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "2",
+    "action": "Created Профиль with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:02.459Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 72,
+  "fields": {
+    "user": null,
+    "model_name": "Водитель",
+    "object_id": "1",
+    "action": "Created Водитель with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:26.969Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 73,
+  "fields": {
+    "user": null,
+    "model_name": "Водитель",
+    "object_id": "1",
+    "action": "Updated Водитель with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:35.259Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 74,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ водителя",
+    "object_id": "1",
+    "action": "Created Категория ВУ водителя with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:35.265Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 75,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ водителя",
+    "object_id": "2",
+    "action": "Created Категория ВУ водителя with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:35.269Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 76,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ водителя",
+    "object_id": "3",
+    "action": "Created Категория ВУ водителя with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:35.272Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 77,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ водителя",
+    "object_id": "4",
+    "action": "Created Категория ВУ водителя with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:46:35.275Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 78,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "3",
+    "action": "Updated пользователь with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:00.780Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 79,
+  "fields": {
+    "user": null,
+    "model_name": "Транспортное средство",
+    "object_id": "1",
+    "action": "Created Транспортное средство with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:21.094Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 80,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:24.588Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 81,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Created пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:51.412Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 82,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Updated пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:51.416Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 83,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "3",
+    "action": "Created Профиль with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:51.423Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 84,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "3",
+    "action": "Updated Профиль with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:51.426Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 85,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:51.431Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 86,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Updated пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:49:51.434Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 87,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:51:22.491Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 88,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:51:51.715Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 89,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:51:51.720Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 90,
+  "fields": {
+    "user": null,
+    "model_name": "Транспортное средство",
+    "object_id": "1",
+    "action": "Updated Транспортное средство with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:53:21.506Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 91,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:53:26.274Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 92,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:53:33.127Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 93,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Updated пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:53:33.133Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 94,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:25.928Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 95,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:25.932Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 96,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "3",
+    "action": "Updated группа with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:43.953Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 97,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "25",
+    "action": "Created запись в журнале with ID 25",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:43.959Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 98,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:49.509Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 99,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:53.375Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 100,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Updated пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:58:53.380Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 101,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:59:35.253Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 102,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T20:59:35.258Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 103,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:00:04.262Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 104,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:00:04.266Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 105,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "1",
+    "action": "Created Заказ with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:02:10.710Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 106,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "1",
+    "action": "Created Чек with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:02:10.717Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 107,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:04:26.930Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 108,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:04:36.653Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 109,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Updated пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:04:36.657Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 110,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "2",
+    "action": "Created Заказ with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:07:19.528Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 111,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "2",
+    "action": "Created Чек with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:07:19.533Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 112,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "3",
+    "action": "Created Заказ with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:08:55.168Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 113,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "3",
+    "action": "Created Чек with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:08:55.173Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 114,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "4",
+    "action": "Created Заказ with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:09:32.488Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 115,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "4",
+    "action": "Created Чек with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:09:32.494Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 116,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:10:42.578Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 117,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:10:49.868Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 118,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:10:49.873Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 119,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "1",
+    "action": "Created Маршрут with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:11:20.080Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 120,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "2",
+    "action": "Created Маршрут with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:11:27.842Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 121,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:11:34.181Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 122,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:12:14.126Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 123,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:12:14.130Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 124,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:46:12.544Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 125,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:46:24.394Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 126,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:46:24.399Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 127,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "3",
+    "action": "Updated пользователь with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:47:20.883Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 128,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:47:24.582Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 129,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "3",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:47:32.111Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 130,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "3",
+    "action": "Updated пользователь with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:47:32.116Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 131,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "1",
+    "action": "Updated Статус заказа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:47:48.160Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 132,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "1",
+    "action": "Updated Статус заказа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:48:00.191Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 133,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "3",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:48:43.392Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 134,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:48:54.993Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 135,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "4",
+    "action": "Updated пользователь with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:48:54.997Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 136,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "5",
+    "action": "Created Статус заказа with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:49:44.346Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 137,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "5",
+    "action": "Created Заказ with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:49:44.351Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 138,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "5",
+    "action": "Created Чек with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:49:44.356Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 139,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "4",
+    "action": "Пользователь newUser вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:52:21.986Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 140,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:52:25.834Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 141,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:52:25.839Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 142,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "3",
+    "action": "Created Маршрут with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:52:53.608Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 143,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:52:58.854Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 144,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "3",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:53:03.100Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 145,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "3",
+    "action": "Updated пользователь with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:53:03.104Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 146,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "5",
+    "action": "Updated Статус заказа with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:53:08.139Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 147,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "5",
+    "action": "Updated Статус заказа with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:53:12.769Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 148,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "3",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:53:16.449Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 149,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:56:26.722Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 150,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:56:26.726Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 151,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Created пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:13.055Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 152,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:13.059Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 153,
+  "fields": {
+    "user": 5,
+    "model_name": "Профиль",
+    "object_id": "4",
+    "action": "Created Профиль with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:13.066Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 154,
+  "fields": {
+    "user": 5,
+    "model_name": "Профиль",
+    "object_id": "4",
+    "action": "Updated Профиль with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:13.069Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 155,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:13.074Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 156,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:13.078Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 157,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "3",
+    "action": "Updated группа with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:33.264Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 158,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "28",
+    "action": "Created запись в журнале with ID 28",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:57:33.270Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 159,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Created пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:59:34.689Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 160,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:59:34.693Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 161,
+  "fields": {
+    "user": 6,
+    "model_name": "Профиль",
+    "object_id": "5",
+    "action": "Created Профиль with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:59:34.700Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 162,
+  "fields": {
+    "user": 6,
+    "model_name": "Профиль",
+    "object_id": "5",
+    "action": "Updated Профиль with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:59:34.704Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 163,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:59:34.709Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 164,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T21:59:34.713Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 165,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:00:20.962Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 166,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "29",
+    "action": "Created запись в журнале with ID 29",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:00:20.970Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 167,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "2",
+    "action": "Updated группа with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:00:29.152Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 168,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "30",
+    "action": "Created запись в журнале with ID 30",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:00:29.156Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 169,
+  "fields": {
+    "user": null,
+    "model_name": "группа",
+    "object_id": "2",
+    "action": "Updated группа with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:00:42.116Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 170,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "31",
+    "action": "Created запись в журнале with ID 31",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:00:42.122Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 171,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "7",
+    "action": "Created пользователь with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:18.121Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 172,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "7",
+    "action": "Updated пользователь with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:18.128Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 173,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "6",
+    "action": "Created Профиль with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:18.133Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 174,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "6",
+    "action": "Updated Профиль with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:18.137Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 175,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "7",
+    "action": "Пользователь Driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:18.142Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 176,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "7",
+    "action": "Updated пользователь with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:18.144Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 177,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "7",
+    "action": "Updated пользователь with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:33.587Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 178,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "32",
+    "action": "Created запись в журнале with ID 32",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:08:33.599Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 179,
+  "fields": {
+    "user": 5,
+    "model_name": "Статус заказа",
+    "object_id": "6",
+    "action": "Created Статус заказа with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:09:04.037Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 180,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "6",
+    "action": "Created Заказ with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:09:24.289Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 181,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "6",
+    "action": "Created Чек with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:09:24.296Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 182,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "7",
+    "action": "Created Заказ with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:10:02.994Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 183,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "7",
+    "action": "Created Чек with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:10:02.999Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 184,
+  "fields": {
+    "user": null,
+    "model_name": "Водитель",
+    "object_id": "2",
+    "action": "Created Водитель with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:24:52.933Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 185,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "4",
+    "action": "Created Маршрут with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:25:24.023Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 186,
+  "fields": {
+    "user": null,
+    "model_name": "Водитель",
+    "object_id": "2",
+    "action": "Updated Водитель with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:25:49.124Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 187,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ водителя",
+    "object_id": "5",
+    "action": "Created Категория ВУ водителя with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:25:49.129Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 188,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "33",
+    "action": "Created запись в журнале with ID 33",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:25:49.135Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 189,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "4",
+    "action": "Updated Маршрут with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:26:15.341Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 190,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "5",
+    "action": "Created Маршрут with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:28:14.081Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 191,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "6",
+    "action": "Updated Статус заказа with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:28:36.973Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 192,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "6",
+    "action": "Updated Статус заказа with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:29:12.051Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 193,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "1",
+    "action": "Updated Заказ with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:31:42.638Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 194,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "1",
+    "action": "Updated Заказ with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:34:02.318Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 195,
+  "fields": {
+    "user": null,
+    "model_name": "запись в журнале",
+    "object_id": "34",
+    "action": "Created запись в журнале with ID 34",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:34:02.322Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 196,
+  "fields": {
+    "user": 5,
+    "model_name": "Статус заказа",
+    "object_id": "7",
+    "action": "Created Статус заказа with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:34:43.329Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 197,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "8",
+    "action": "Created Заказ with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:34:43.334Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 198,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "8",
+    "action": "Created Чек with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:34:43.340Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 199,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "9",
+    "action": "Created Заказ with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:35:42.047Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 200,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "9",
+    "action": "Created Чек with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:35:42.053Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 201,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:37:41.011Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 202,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "6",
+    "action": "Created Маршрут with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:38:14.977Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 203,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "9",
+    "action": "Updated Заказ with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:38:22.398Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 204,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "7",
+    "action": "Пользователь Driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:39:02.455Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 205,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:39:33.375Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 206,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:39:33.380Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 207,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "7",
+    "action": "Пользователь Driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:40:13.307Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 208,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "7",
+    "action": "Updated пользователь with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:40:13.311Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 209,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "7",
+    "action": "Created Маршрут with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:42:10.684Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 210,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "8",
+    "action": "Updated Заказ with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:42:15.203Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 211,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "10",
+    "action": "Created Заказ with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:42:48.119Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 212,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "10",
+    "action": "Created Чек with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:42:48.126Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 213,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "9",
+    "action": "Updated Заказ with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:43:01.851Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 214,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "8",
+    "action": "Updated Заказ with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:43:09.075Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 215,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "8",
+    "action": "Created Маршрут with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:43:44.792Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 216,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "10",
+    "action": "Updated Заказ with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:43:56.889Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 217,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "11",
+    "action": "Created Заказ with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:45:22.179Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 218,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "11",
+    "action": "Created Чек with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:45:22.184Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 219,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "9",
+    "action": "Created Маршрут with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:45:38.868Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 220,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "11",
+    "action": "Updated Заказ with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-12T22:45:44.831Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 221,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:13:54.870Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 222,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:14:16.842Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 223,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:14:16.846Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 224,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:17:27.005Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 225,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:17:39.099Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 226,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:17:39.103Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 227,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:17:44.876Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 228,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:12.014Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 229,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "1",
+    "action": "Updated пользователь with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:12.024Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 230,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "1",
+    "action": "Updated Профиль with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:54.997Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 231,
+  "fields": {
+    "user": 5,
+    "model_name": "Профиль",
+    "object_id": "4",
+    "action": "Updated Профиль with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.000Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 232,
+  "fields": {
+    "user": 6,
+    "model_name": "Профиль",
+    "object_id": "5",
+    "action": "Updated Профиль with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.003Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 233,
+  "fields": {
+    "user": null,
+    "model_name": "Профиль",
+    "object_id": "6",
+    "action": "Updated Профиль with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.006Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 234,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "1",
+    "action": "Created Чек with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.009Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 235,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "8",
+    "action": "Created Чек with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.012Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 236,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "9",
+    "action": "Updated Чек with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.013Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 237,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "10",
+    "action": "Updated Чек with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.015Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 238,
+  "fields": {
+    "user": null,
+    "model_name": "Чек",
+    "object_id": "11",
+    "action": "Updated Чек with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.017Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 239,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "1",
+    "action": "Created Заказ with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.020Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 240,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "8",
+    "action": "Created Заказ with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.022Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 241,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "9",
+    "action": "Updated Заказ with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.024Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 242,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "10",
+    "action": "Updated Заказ with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.025Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 243,
+  "fields": {
+    "user": null,
+    "model_name": "Заказ",
+    "object_id": "11",
+    "action": "Updated Заказ with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.027Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 244,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "1",
+    "action": "Updated Тип груза with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.029Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 245,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "2",
+    "action": "Created Тип груза with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.030Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 246,
+  "fields": {
+    "user": null,
+    "model_name": "Тип груза",
+    "object_id": "4",
+    "action": "Updated Тип груза with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.032Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 247,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "2",
+    "action": "Updated Статус заказа with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.034Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 248,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "3",
+    "action": "Updated Статус заказа with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.036Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 249,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "4",
+    "action": "Updated Статус заказа with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.038Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 250,
+  "fields": {
+    "user": null,
+    "model_name": "Статус заказа",
+    "object_id": "7",
+    "action": "Updated Статус заказа with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.040Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 251,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "4",
+    "action": "Created Маршрут with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.042Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 252,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "6",
+    "action": "Updated Маршрут with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.044Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 253,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "7",
+    "action": "Created Маршрут with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.046Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 254,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "8",
+    "action": "Updated Маршрут with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.048Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 255,
+  "fields": {
+    "user": null,
+    "model_name": "Маршрут",
+    "object_id": "9",
+    "action": "Updated Маршрут with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.049Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 256,
+  "fields": {
+    "user": null,
+    "model_name": "Водитель",
+    "object_id": "2",
+    "action": "Updated Водитель with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.051Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 257,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ водителя",
+    "object_id": "5",
+    "action": "Updated Категория ВУ водителя with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.055Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 258,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "1",
+    "action": "Updated Категория ВУ with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.057Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 259,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "2",
+    "action": "Updated Категория ВУ with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.058Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 260,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "3",
+    "action": "Updated Категория ВУ with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.060Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 261,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "4",
+    "action": "Updated Категория ВУ with ID 4",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.061Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 262,
+  "fields": {
+    "user": null,
+    "model_name": "Категория ВУ",
+    "object_id": "5",
+    "action": "Updated Категория ВУ with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.063Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 263,
+  "fields": {
+    "user": null,
+    "model_name": "Транспортное средство",
+    "object_id": "1",
+    "action": "Updated Транспортное средство with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.065Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 264,
+  "fields": {
+    "user": null,
+    "model_name": "Статус ТС",
+    "object_id": "1",
+    "action": "Updated Статус ТС with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.066Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 265,
+  "fields": {
+    "user": null,
+    "model_name": "Статус ТС",
+    "object_id": "2",
+    "action": "Updated Статус ТС with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.068Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 266,
+  "fields": {
+    "user": null,
+    "model_name": "Тип ТС",
+    "object_id": "1",
+    "action": "Updated Тип ТС with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.069Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 267,
+  "fields": {
+    "user": null,
+    "model_name": "Тип ТС",
+    "object_id": "2",
+    "action": "Updated Тип ТС with ID 2",
+    "status": "INFO",
+    "created_at": "2024-12-13T09:58:55.072Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 271,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "1",
+    "action": "Пользователь root вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:10:30.790Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 272,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Created пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:19:59.739Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 273,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:24:39.795Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 274,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:24:39.800Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 275,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:24:56.059Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 276,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "35",
+    "action": "Created запись в журнале with ID 35",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:24:56.069Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 277,
+  "fields": {
+    "user": 8,
+    "model_name": "Статус ТС",
+    "object_id": "3",
+    "action": "Created Статус ТС with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:29:05.950Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 278,
+  "fields": {
+    "user": 8,
+    "model_name": "Статус ТС",
+    "object_id": "3",
+    "action": "Updated Статус ТС with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:31:35.634Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 279,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:36:06.689Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 280,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:36:10.559Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 281,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:36:10.563Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 282,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "12",
+    "action": "Created Заказ with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:39:05.221Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 283,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "12",
+    "action": "Created Чек with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:39:05.226Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 284,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:43:55.127Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 285,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:02.699Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 286,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:02.703Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 287,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "9",
+    "action": "Created пользователь with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:20.551Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 288,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:22.215Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 289,
+  "fields": {
+    "user": null,
+    "model_name": "User",
+    "object_id": "9",
+    "action": "Пользователь manager вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:27.277Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 290,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "9",
+    "action": "Updated пользователь with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:27.281Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 291,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:39.757Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 292,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:39.761Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 293,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "9",
+    "action": "Updated пользователь with ID 9",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:52.842Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 294,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "37",
+    "action": "Created запись в журнале with ID 37",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:44:52.849Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 295,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "10",
+    "action": "Created пользователь with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:45:23.064Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 296,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "11",
+    "action": "Created пользователь with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:46:03.380Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 297,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "11",
+    "action": "Updated пользователь with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:46:33.508Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 298,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "11",
+    "action": "Updated пользователь with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:46:54.067Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 299,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:47:26.557Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 300,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:47:41.465Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 301,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:47:47.574Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 302,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:47:47.578Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 303,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:48:13.726Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 304,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:48:20.662Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 305,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:48:20.665Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 306,
+  "fields": {
+    "user": 8,
+    "model_name": "группа",
+    "object_id": "1",
+    "action": "Updated группа with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:48:47.969Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 307,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "38",
+    "action": "Created запись в журнале with ID 38",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:48:47.978Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 308,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:07.313Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 309,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Created пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:24.706Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 310,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:24.710Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 311,
+  "fields": {
+    "user": 12,
+    "model_name": "Профиль",
+    "object_id": "7",
+    "action": "Created Профиль with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:24.718Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 312,
+  "fields": {
+    "user": 12,
+    "model_name": "Профиль",
+    "object_id": "7",
+    "action": "Updated Профиль with ID 7",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:24.722Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 313,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:24.725Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 314,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:24.728Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 315,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:28.869Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 316,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:37.233Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 317,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:37.237Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 318,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:48.834Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 319,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:49:58.436Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 320,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:50:11.368Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 321,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "39",
+    "action": "Created запись в журнале with ID 39",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:50:11.376Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 322,
+  "fields": {
+    "user": 8,
+    "model_name": "Водитель",
+    "object_id": "3",
+    "action": "Created Водитель with ID 3",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:50:37.668Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 323,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:53:27.323Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 324,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:53:50.429Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 325,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:53:50.433Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 326,
+  "fields": {
+    "user": 8,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:04.550Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 327,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:06.947Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 328,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:15.601Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 329,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:15.605Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 330,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:33.201Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 331,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:33.205Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 332,
+  "fields": {
+    "user": 8,
+    "model_name": "Транспортное средство",
+    "object_id": "1",
+    "action": "Updated Транспортное средство with ID 1",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:47.755Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 333,
+  "fields": {
+    "user": 8,
+    "model_name": "Маршрут",
+    "object_id": "10",
+    "action": "Created Маршрут with ID 10",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:54:58.364Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 334,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:55:02.996Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 335,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:55:18.764Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 336,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:55:18.767Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 337,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:56:21.968Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 338,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:56:33.676Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 339,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:56:33.679Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 340,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:57:21.190Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 341,
+  "fields": {
+    "user": 5,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:57:21.194Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 342,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:57:53.601Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 343,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:57:59.091Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 344,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:57:59.095Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 345,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Created Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:58:30.747Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 346,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "13",
+    "action": "Created Чек with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:58:30.751Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 347,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:58:36.254Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 348,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:58:51.663Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 349,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:58:51.667Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 350,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "11",
+    "action": "Created Маршрут with ID 11",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:59:00.021Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 351,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:59:07.537Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 352,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:59:21.385Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 353,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T20:59:21.389Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 354,
+  "fields": {
+    "user": 12,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Updated Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:01:07.992Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 355,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:01:29.507Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 356,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:01:35.675Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 357,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:01:35.679Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 358,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "14",
+    "action": "Created Заказ with ID 14",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:15.872Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 359,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "14",
+    "action": "Created Чек with ID 14",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:15.877Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 360,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:18.103Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 361,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:21.238Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 362,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:21.242Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 363,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:25.741Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 364,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:33.868Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 365,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "6",
+    "action": "Updated пользователь with ID 6",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:33.871Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 366,
+  "fields": {
+    "user": 6,
+    "model_name": "Маршрут",
+    "object_id": "12",
+    "action": "Created Маршрут with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:49.436Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 367,
+  "fields": {
+    "user": 6,
+    "model_name": "User",
+    "object_id": "6",
+    "action": "Пользователь Manager111 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:50.696Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 368,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:54.917Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 369,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "12",
+    "action": "Updated пользователь with ID 12",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:54.921Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 370,
+  "fields": {
+    "user": 12,
+    "model_name": "Заказ",
+    "object_id": "14",
+    "action": "Updated Заказ with ID 14",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:02:57.304Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 371,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:07:22.824Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 372,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:07:22.828Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 373,
+  "fields": {
+    "user": 8,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Updated Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:07:33.634Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 374,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "43",
+    "action": "Created запись в журнале with ID 43",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:07:33.638Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 375,
+  "fields": {
+    "user": 12,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Updated Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:07:45.670Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 376,
+  "fields": {
+    "user": 8,
+    "model_name": "Заказ",
+    "object_id": "14",
+    "action": "Updated Заказ with ID 14",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:08:32.665Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 377,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "44",
+    "action": "Created запись в журнале with ID 44",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:08:32.668Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 378,
+  "fields": {
+    "user": 8,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Updated Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:08:36.852Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 379,
+  "fields": {
+    "user": 8,
+    "model_name": "запись в журнале",
+    "object_id": "45",
+    "action": "Created запись в журнале with ID 45",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:08:36.855Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 380,
+  "fields": {
+    "user": 12,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Updated Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:12:08.920Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 381,
+  "fields": {
+    "user": 12,
+    "model_name": "Заказ",
+    "object_id": "13",
+    "action": "Updated Заказ with ID 13",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:12:25.737Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 382,
+  "fields": {
+    "user": 12,
+    "model_name": "Заказ",
+    "object_id": "14",
+    "action": "Updated Заказ with ID 14",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:12:40.835Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 383,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:17:04.300Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 384,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:17:10.883Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 385,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:17:10.886Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 386,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:18:28.278Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 387,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:18:34.763Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 388,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "5",
+    "action": "Updated пользователь with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:18:34.769Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 389,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "15",
+    "action": "Created Заказ with ID 15",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:19:01.780Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 390,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "15",
+    "action": "Created Чек with ID 15",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:19:01.786Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 391,
+  "fields": {
+    "user": 5,
+    "model_name": "Заказ",
+    "object_id": "16",
+    "action": "Created Заказ with ID 16",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:20:02.430Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 392,
+  "fields": {
+    "user": 5,
+    "model_name": "Чек",
+    "object_id": "16",
+    "action": "Created Чек with ID 16",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:20:02.434Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 393,
+  "fields": {
+    "user": 5,
+    "model_name": "User",
+    "object_id": "5",
+    "action": "Пользователь user1 вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:20:05.175Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 394,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:20:10.289Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 395,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:20:10.293Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 396,
+  "fields": {
+    "user": 12,
+    "model_name": "User",
+    "object_id": "12",
+    "action": "Пользователь driver вышел из системы",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:26:13.923Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 397,
+  "fields": {
+    "user": 8,
+    "model_name": "User",
+    "object_id": "8",
+    "action": "Пользователь admin вошел в систему",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:26:17.987Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 398,
+  "fields": {
+    "user": null,
+    "model_name": "пользователь",
+    "object_id": "8",
+    "action": "Updated пользователь with ID 8",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:26:17.991Z"
+  }
+},
+{
+  "model": "KilometersApp.useractionlog",
+  "pk": 399,
+  "fields": {
+    "user": 8,
+    "model_name": "Тип груза",
+    "object_id": "5",
+    "action": "Created Тип груза with ID 5",
+    "status": "INFO",
+    "created_at": "2024-12-14T21:26:38.670Z"
+  }
+}
+]

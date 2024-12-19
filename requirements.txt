@@ -1,0 +1,12 @@
+Django>=5.1
+psycopg2>=2.9
+djangorestframework
+django-tables2
+django-filter
+django-extensions
+django-widget-tweaks
+cryptography
+
+weasyprint
+matplotlib
+pandas

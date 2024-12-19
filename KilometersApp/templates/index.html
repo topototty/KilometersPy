@@ -1,0 +1,135 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block title %}
+    Главная страница
+{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/indexStyle.css' %}">
+
+    <style>
+        #map {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        .vehicle-option {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .vehicle-option:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+{% include 'User/order_form.html' %}
+
+    <div class="container text-center mt-5">
+        <h2 class="main-title mb-3">Мы помогаем организовывать грузоперевозки</h2>
+        <p class="subtitle mb-5">Наша команда ценит ваше время</p>
+
+        <div class="row mt-4 justify-content-center">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card custom-card">
+                    <img src="{% static 'img/card2.jpg' %}" class="card-img-top custom-image" alt="Погрузка">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-bold">Погрузка</h5>
+                        <p class="card-text">Наши грузчики упакуют, вынесут и погрузят вещи, разберут и соберут мебель,
+                            расставят всё по местам и вынесут мусор.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card custom-card">
+                    <img src="{% static 'img/card1.jpg' %}" class="card-img-top custom-image" alt="Безопасность">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-bold">Безопасность</h5>
+                        <p class="card-text">Для безопасности мебель обернём, одежду — в пакеты, хрупкие вещи — в плёнку
+                            и прочные коробки с маркировкой.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card custom-card">
+                    <img src="{% static 'img/card3.jpg' %}" class="card-img-top custom-image" alt="Оплата">
+                    <div class="card-body text-start">
+                        <h5 class="card-title fw-bold">Прозрачность</h5>
+                        <p class="card-text">Оценим сколько нужно времени на грузоперевозку. Прозрачный договор
+                            транспортных услуг без подводных камней.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid stats-section">
+            <div class="row mt-5">
+                <!-- Заголовок -->
+                <div class="col-12">
+                    <h2 class="stats-header custom-header">Более 1000 довольных клиентов</h2>
+                </div>
+
+            </div>
+            <div class="row text-center">
+                <!-- Первая колонка -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+                    <div class="stat-img-wrapper">
+                        <img src="{% static 'img/99.svg' %}" alt="99" class="stat-img">
+                    </div>
+                    <p class="stat-text">Довольных клиентов</p>
+                </div>
+                <!-- Вторая колонка -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+                    <div class="stat-img-wrapper">
+                        <img src="{% static 'img/10.svg' %}" alt="10" class="stat-img">
+                    </div>
+                    <p class="stat-text">Лет на рынке</p>
+                </div>
+                <!-- Третья колонка -->
+                <div class="col-lg-4 col-md-6 col-sm-12 d-flex flex-column align-items-center">
+                    <div class="stat-img-wrapper">
+                        <img src="{% static 'img/236.svg' %}" alt="236" class="stat-img">
+                    </div>
+                    <p class="stat-text">Положительных отзывов</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row g-0 promo-section">
+
+                <div class="col-md-6 promo-text d-flex flex-column justify-content-center">
+                    <h1>KILO</h1>
+                    <p>c заботой о вашем грузе!</p>
+                    <a href="#" class="btn custom-button">Сделать заказ</a>
+                </div>
+
+                <div class="col-md-6 promo-img">
+                    <img src="{% static 'img/delivery-workers.png' %}" alt="Доставка">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="blue-bar w-100"></div>
+
+{% endblock %}

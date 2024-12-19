@@ -1,0 +1,129 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+{% block title %}
+Мои чеки
+{% endblock %}
+
+{% block styles %}
+<style>
+    .check-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .check-card {
+        background: #fff;
+        border: 1px solid #2B4EFF;
+        border-radius: 8px;
+        width: 250px;
+        padding: 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+        position: relative;
+    }
+
+    .check-card h3 {
+        font-size: 18px;
+        margin: 0 0 10px;
+        color: #2B4EFF;
+    }
+
+    .check-info {
+        font-size: 14px;
+        color: #333;
+    }
+
+    .check-info p {
+        margin: 5px 0;
+    }
+
+    /* Модальное окно (Bootstrap) */
+    .modal-content {
+        padding: 20px;
+    }
+
+    .modal-body p {
+        margin: 5px 0;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Мои чеки</h1>
+    {% if checks %}
+    <div class="check-list">
+        {% for check in checks %}
+        <div class="check-card" 
+             data-bs-toggle="modal" 
+             data-bs-target="#checkModal"
+             data-order-number="{{ check.order.order_number }}"
+             data-date="{{ check.date|date:"d.m.Y" }}"
+             data-time="{{ check.time|time:"H:i" }}"
+             data-sum="{{ check.decimal }}"
+             data-check-id="{{ check.pk }}">
+
+            <h3>Заказ №{{ check.order.order_number }}</h3>
+            <div class="check-info">
+                <p><strong>Дата:</strong> {{ check.date|date:"d.m.Y" }}</p>
+                <p><strong>Сумма:</strong> {{ check.decimal }} ₽</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p>У вас нет чеков.</p>
+    {% endif %}
+</div>
+
+<!-- Модальное окно Bootstrap -->
+<div class="modal fade" id="checkModal" tabindex="-1" aria-labelledby="checkModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="checkModalLabel">Детали чека</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Номер заказа:</strong> <span id="modalOrderNumber"></span></p>
+        <p><strong>Дата:</strong> <span id="modalDate"></span></p>
+        <p><strong>Время:</strong> <span id="modalTime"></span></p>
+        <p><strong>Сумма:</strong> <span id="modalSum"></span> ₽</p>
+      </div>
+      <div class="modal-footer">
+        <a id="modalDownloadPdf" href="#" class="btn btn-primary" target="_blank">Скачать PDF</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const checkCards = document.querySelectorAll('.check-card');
+    const modalOrderNumber = document.getElementById('modalOrderNumber');
+    const modalDate = document.getElementById('modalDate');
+    const modalTime = document.getElementById('modalTime');
+    const modalSum = document.getElementById('modalSum');
+    const modalDownloadPdf = document.getElementById('modalDownloadPdf');
+
+    checkCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const orderNumber = card.dataset.orderNumber;
+            const date = card.dataset.date;
+            const time = card.dataset.time;
+            const sum = card.dataset.sum;
+            const checkId = card.dataset.checkId;
+
+            modalOrderNumber.textContent = orderNumber;
+            modalDate.textContent = date;
+            modalTime.textContent = time;
+            modalSum.textContent = sum;
+
+            modalDownloadPdf.href = `/checks/pdf/${checkId}/`;
+        });
+    });
+});
+</script>
+{% endblock %}

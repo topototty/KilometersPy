@@ -1,0 +1,147 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+{% block styles %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+<style>
+    .profile-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .user-card {
+        flex: 1 1 400px;
+        border: 1px solid #2B4EFF;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .user-card h2 {
+        margin: 0 0 10px;
+        color: #2B4EFF;
+        font-size: 24px;
+    }
+
+    .user-handle {
+        color: #666;
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .user-info {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .user-info p {
+        margin: 5px 0;
+    }
+
+    .deliveries-card {
+        flex: 1 1 400px;
+        border: 1px solid #2B4EFF;
+        border-radius: 8px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .deliveries-card h3 {
+        margin-top: 0;
+        font-size: 20px;
+        color: #2B4EFF;
+        margin-bottom: 10px;
+    }
+
+    .deliveries-card .next-delivery {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .deliveries-card .next-delivery span {
+        font-weight: bold;
+        color: #2B4EFF;
+    }
+
+    .deliveries-card a {
+        display: inline-block;
+        text-decoration: none;
+        color: #2B4EFF;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    .bottom-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .bottom-actions a {
+        display: inline-block;
+        padding: 20px;
+        border: 1px solid #2B4EFF;
+        border-radius: 8px;
+        text-decoration: none;
+        color: #2B4EFF;
+        font-weight: bold;
+        flex: 1 1 200px;
+        text-align: center;
+    }
+
+    .bottom-actions a:hover {
+        background: #2B4EFF;
+        color: #fff;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Профиль </h1>
+    <div class="profile-row">
+        <div class="user-card">
+            <!-- Вывод имени и фамилии пользователя -->
+            <h2>{{ user.first_name }} {{ user.last_name }}</h2>
+            <!-- Никнейм (username) -->
+            <div class="user-handle">@{{ user.username }}</div>
+            <div class="user-info">
+                <!-- Телефон из профиля (расшифрованный phone) -->
+                <p><strong>Номер телефона:</strong> {{ profile.phone }}</p>
+                <!-- Email из модели User -->
+                <p><strong>Email:</strong> {{ user.email }}</p>
+            </div>
+        </div>
+        {% if "User" in user_groups %}
+     <div class="deliveries-card">
+            <h3>Доставки</h3>
+            {% if nearest_order %}
+            <div class="next-delivery">
+                Ближайшая <span>{{ nearest_order.delivery_date|date:"d F" }}</span><br>
+                Примерно <span>в {{ nearest_order.delivery_time|time:"H:i" }}</span>
+            </div>
+            <a href="{% url 'my_orders' %}">Просмотреть заказы</a>
+            {% else %}
+            <p>На данный момент нет запланированных доставок.</p>
+            {% endif %}
+        </div>
+  </div>
+  {% endif %}
+
+    {% if "User" in user_groups %}
+    <div class="bottom-actions">
+        <a href="{% url 'license' %}">Пользовательское соглашение</a>
+        <!-- Ссылка на чеки или на заказы -->
+        <a href="{% url 'checks' %}">Чеки &gt;</a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}
+

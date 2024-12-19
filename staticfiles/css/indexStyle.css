@@ -1,0 +1,48 @@
+/* Основной заголовок */
+.main-title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #6c757d;
+}
+
+/* Карточки */
+.custom-card {
+    height: 100%; /* Равномерная высота карточек */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden; /* Убираем лишние элементы */
+    border: none; /* Убираем рамки */
+    background: none;
+    box-shadow: none; /* Убираем тени */
+}
+
+/* Изображения */
+.custom-image {
+    border: 5px solid red;
+}
+
+/* Тело карточки */
+.card-body {
+    text-align: left;
+    flex-grow: 1; /* Растягиваем содержимое */
+}
+
+.card-title {
+    font-size: 18px;
+    color: #0035e7;
+    margin-bottom: 10px;
+}
+
+/* Текст карточек */
+.card-text {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 10px;
+}
+
+

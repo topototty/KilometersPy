@@ -1,0 +1,67 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% block title %}Панель водителя{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Панель управления</h1>
+    <div class="accordion" id="accordionOrders">
+        {% for status, orders in orders_by_status.items %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading{{ forloop.counter }}">
+                    <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ forloop.counter }}" aria-expanded="{{ forloop.first }}" aria-controls="collapse{{ forloop.counter }}">
+                        {{ status }}
+                    </button>
+                </h2>
+                <div id="collapse{{ forloop.counter }}" class="accordion-collapse collapse {% if forloop.first %}show{% endif %}" aria-labelledby="heading{{ forloop.counter }}" data-bs-parent="#accordionOrders">
+                    <div class="accordion-body">
+                        {% if orders %}
+                            {% for order in orders %}
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        Заказ №{{ order.order_number }}
+                                    </div>
+                                    <div class="card-body">
+                                        <p><strong>Адрес отправления:</strong> {{ order.origin_address }}</p>
+                                        <p><strong>Адрес доставки:</strong> {{ order.destination_address }}</p>
+                                        <p><strong>Дата доставки:</strong> {{ order.delivery_date }}</p>
+                                        <p><strong>Вес груза:</strong> {{ order.cargo_weight }} кг</p>
+                                        <!-- Кнопки для изменения статуса -->
+                                        <form method="post" class="d-inline">
+                                            {% csrf_token %}
+                                            <input type="hidden" name="order_id" value="{{ order.pk }}">
+                                            {% if status == "Ожидание" %}
+                                                <form method="post" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="order_id" value="{{ order.pk }}">
+                                                    <input type="hidden" name="new_status" value="Доставляется">
+                                                    <button type="submit" class="btn btn-primary">Начать доставку</button>
+                                                </form>
+                                                <form method="post" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="order_id" value="{{ order.pk }}">
+                                                    <input type="hidden" name="new_status" value="Отменен">
+                                                    <button type="submit" class="btn btn-danger">Отменить заказ</button>
+                                                </form>
+                                            {% elif status == "Доставляется" %}
+                                                <form method="post" class="d-inline">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="order_id" value="{{ order.pk }}">
+                                                    <input type="hidden" name="new_status" value="Доставлен">
+                                                    <button type="submit" class="btn btn-success">Завершить доставку</button>
+                                                </form>
+                                            {% endif %}
+                                        </form>                                        
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% else %}
+                            <p>Нет заказов в этой категории.</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

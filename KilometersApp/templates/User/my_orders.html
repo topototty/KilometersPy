@@ -1,0 +1,371 @@
+{% extends 'inc/base.html' %}
+{% load static %}
+
+{% block title %}
+Мои заказы
+{% endblock %}
+
+{% block styles %}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet">
+<style>
+    .order-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .order-card {
+        background: #fff;
+        color: #000;
+        border-radius: 8px;
+        width: 300px;
+        padding: 20px;
+        box-sizing: border-box;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .order-card h3 {
+        font-size: 18px;
+        margin: 0 0 10px;
+        font-weight: bold;
+    }
+
+    .order-date-time {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .order-status-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 10px;
+    }
+
+    .order-status-tag {
+        background: #eee;
+        border-radius: 4px;
+        padding: 4px 8px;
+        font-size: 12px;
+        color: #333;
+    }
+
+    .order-description {
+        font-size: 14px;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .order-price {
+        font-weight: bold;
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .order-footer {
+        font-size: 14px;
+        color: #666;
+    }
+
+    .order-active {
+        border: 2px solid #3db57a;
+    }
+
+    .order-active .order-status-tag {
+        background: #3db57a;
+        color: #fff;
+    }
+
+    .order-waiting {
+        border: 2px solid #777;
+    }
+
+    .order-done {
+        border: 2px solid #3db57a;
+    }
+
+    .order-done .order-status-tag {
+        background: #3db57a;
+        color: #fff;
+    }
+
+    .section {
+        margin-bottom: 40px;
+    }
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-5">
+    <h1>Мои заказы</h1>
+
+    <!-- Активные -->
+    <div class="section">
+        <h2>Активные</h2>
+        <div class="order-list">
+            {% for order in active_orders %}
+            <div class="order-card {% if order.order_status.name == "Доставляется" %}order-active{% else %}order-waiting{% endif %}"
+                 data-order-id="{{ order.pk }}"
+                 data-order-number="{{ order.order_number }}"
+                 data-order-date="{{ order.delivery_date }}"
+                 data-order-time="{{ order.delivery_time }}"
+                 data-order-status="{{ order.order_status.name }}"
+                 data-origin-address="{{ order.origin_address }}"
+                 data-destination-address="{{ order.destination_address }}"
+                 data-width="{{ order.cargo_width }}"
+                 data-length="{{ order.cargo_length }}"
+                 data-weight="{{ order.cargo_weight }}"
+                 data-description="{{ order.cargo_description }}"
+                 data-cargotype="{{ order.cargo_type.name }}"
+                 data-vehicletype="{{ order.vehicle_type.name }}"
+                 data-bs-toggle="modal" data-bs-target="#orderModal">
+
+                <h3>Заказ №{{ order.order_number }}</h3>
+                <div class="order-date-time">{{ order.delivery_date|date:"d F" }} • {{ order.delivery_time|time:"H:i" }}</div>
+                <div class="order-status-tags">
+                    <div class="order-status-tag">{{ order.order_status.name }}</div>
+                    <div class="order-status-tag">{{ order.cargo_type.name }}</div>
+                </div>
+                <div class="order-description">
+                    {{ order.cargo_description|truncatechars:60 }}
+                </div>
+                <div class="order-price">{{ order.vehicle_type.price }} ₽</div>
+                <div class="order-footer">
+                    {% if order.order_status.name == "Доставляется" %}
+                        В пути...
+                    {% else %}
+                        Ожидаем...
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <p>Нет активных заказов</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Завершенные -->
+    <div class="section">
+        <h2>Завершенные</h2>
+        <div class="order-list">
+            {% for order in done_orders %}
+            <div class="order-card order-done"
+                 data-order-id="{{ order.pk }}"
+                 data-order-number="{{ order.order_number }}"
+                 data-order-date="{{ order.delivery_date }}"
+                 data-order-time="{{ order.delivery_time }}"
+                 data-order-status="{{ order.order_status.name }}"
+                 data-origin-address="{{ order.origin_address }}"
+                 data-destination-address="{{ order.destination_address }}"
+                 data-width="{{ order.cargo_width }}"
+                 data-length="{{ order.cargo_length }}"
+                 data-weight="{{ order.cargo_weight }}"
+                 data-description="{{ order.cargo_description }}"
+                 data-cargotype="{{ order.cargo_type.name }}"
+                 data-vehicletype="{{ order.vehicle_type.name }}"
+                 data-bs-toggle="modal" data-bs-target="#orderModal">
+
+                <h3>Заказ №{{ order.order_number }}</h3>
+                <div class="order-date-time">{{ order.delivery_date|date:"d F" }} • {{ order.delivery_time|time:"H:i" }}</div>
+                <div class="order-status-tags">
+                    <div class="order-status-tag">{{ order.order_status.name }}</div>
+                    <div class="order-status-tag">{{ order.cargo_type.name }}</div>
+                </div>
+                <div class="order-description">
+                    {{ order.cargo_description|truncatechars:60 }}
+                </div>
+                <div class="order-price">{{ order.vehicle_type.price }} ₽</div>
+                <div class="order-footer">
+                    Выполнен
+                </div>
+            </div>
+            {% empty %}
+            <p>Нет завершенных заказов</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Отмененные -->
+    <div class="section">
+        <h2>Отмененные</h2>
+        <div class="order-list">
+            {% for order in canceled_orders %}
+            <div class="order-card" style="border: 2px solid #f00;"
+                 data-order-id="{{ order.pk }}"
+                 data-order-number="{{ order.order_number }}"
+                 data-order-date="{{ order.delivery_date }}"
+                 data-order-time="{{ order.delivery_time }}"
+                 data-order-status="{{ order.order_status.name }}"
+                 data-origin-address="{{ order.origin_address }}"
+                 data-destination-address="{{ order.destination_address }}"
+                 data-width="{{ order.cargo_width }}"
+                 data-length="{{ order.cargo_length }}"
+                 data-weight="{{ order.cargo_weight }}"
+                 data-description="{{ order.cargo_description }}"
+                 data-cargotype="{{ order.cargo_type.name }}"
+                 data-vehicletype="{{ order.vehicle_type.name }}"
+                 data-bs-toggle="modal" data-bs-target="#orderModal">
+
+                <h3>Заказ №{{ order.order_number }}</h3>
+                <div class="order-date-time">{{ order.delivery_date|date:"d F" }} • {{ order.delivery_time|time:"H:i" }}</div>
+                <div class="order-status-tags">
+                    <div class="order-status-tag" style="background: #f00; color: #fff;">{{ order.order_status.name }}</div>
+                </div>
+                <div class="order-description">
+                    {{ order.cargo_description|truncatechars:60 }}
+                </div>
+                <div class="order-price">{{ order.vehicle_type.price }} ₽</div>
+                <div class="order-footer">Заказ был отменен</div>
+            </div>
+            {% empty %}
+            <p>Нет отмененных заказов</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно с информацией о заказе -->
+<div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content" id="modalOrderContent">
+      <div class="modal-header">
+        <h2 class="modal-title" id="orderModalLabel">Информация о заказе</h2>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Номер заказа:</strong> <span id="modalOrderNumber"></span></p>
+        <p><strong>Дата доставки:</strong> <span id="modalOrderDate"></span></p>
+        <p><strong>Время доставки:</strong> <span id="modalOrderTime"></span></p>
+        <p><strong>Статус:</strong> <span id="modalOrderStatus"></span></p>
+        <p><strong>Адрес отправления:</strong> <span id="modalOriginAddress"></span></p>
+        <p><strong>Адрес доставки:</strong> <span id="modalDestinationAddress"></span></p>
+        <p><strong>Тип груза:</strong> <span id="modalCargoType"></span></p>
+        <p><strong>Тип ТС:</strong> <span id="modalVehicleType"></span></p>
+        <p><strong>Размеры (ШxДxВес):</strong> <span id="modalDimensions"></span></p>
+        <p><strong>Описание:</strong> <span id="modalDescription"></span></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Получаем все элементы заказов
+        const orderCards = document.querySelectorAll('.order-card');
+        
+        // Для каждого элемента добавляем обработчик клика
+        orderCards.forEach(function(card) {
+            card.addEventListener('click', function() {
+                // Извлекаем данные из data-* атрибутов
+                const orderNumber = card.getAttribute('data-order-number');
+                const orderDate = card.getAttribute('data-order-date');
+                const orderTime = card.getAttribute('data-order-time');
+                const orderStatus = card.getAttribute('data-order-status');
+                const originAddress = card.getAttribute('data-origin-address');
+                const destinationAddress = card.getAttribute('data-destination-address');
+                const width = card.getAttribute('data-width');
+                const length = card.getAttribute('data-length');
+                const weight = card.getAttribute('data-weight');
+                const description = card.getAttribute('data-description');
+                const cargoType = card.getAttribute('data-cargotype');
+                const vehicleType = card.getAttribute('data-vehicletype');
+                
+                // Заполняем модальное окно
+                document.getElementById('modalOrderNumber').textContent = `Заказ №${orderNumber}`;
+                document.getElementById('modalOrderDate').textContent = orderDate;
+                document.getElementById('modalOrderTime').textContent = orderTime;
+                document.getElementById('modalOrderStatus').textContent = orderStatus;
+                document.getElementById('modalOriginAddress').textContent = originAddress;
+                document.getElementById('modalDestinationAddress').textContent = destinationAddress;
+                document.getElementById('modalCargoType').textContent = cargoType;
+                document.getElementById('modalVehicleType').textContent = vehicleType;
+                document.getElementById('modalDimensions').textContent = `${width} x ${length} x ${weight}`;
+                document.getElementById('modalDescription').textContent = description;
+
+                // (Необязательно) Обновить ссылку на скачивание описания
+                const modalDownloadLink = document.getElementById('modalDownloadLink');
+                modalDownloadLink.href = `/path/to/download/${orderNumber}`;  // Ссылка на описание
+            });
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Инициализация карты
+        const modalMap = L.map('modalMap').setView([55.7558, 37.6173], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(modalMap);
+    
+        let routeControl; // Хранение маршрута
+    
+        // Добавление событий для ссылок в таблице
+        document.querySelectorAll('.order-detail-link').forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+    
+                const orderId = link.dataset.orderId;
+    
+                // Получаем детали заказа через AJAX
+                fetch(`/managment/orders/${orderId}/details/`)
+    .then(response => response.json())
+    .then(data => {
+        // Заполняем модальное окно
+        document.getElementById('modalOrderNumber').textContent = `Заказ №${data.order_number}`;
+        document.getElementById('modalOriginAddress').textContent = data.origin_address;
+        document.getElementById('modalDestinationAddress').textContent = data.destination_address;
+        document.getElementById('modalCargoWidth').textContent = data.cargo_width;
+        document.getElementById('modalCargoLength').textContent = data.cargo_length;
+        document.getElementById('modalCargoWeight').textContent = data.cargo_weight;
+        document.getElementById('modalCargoDescription').textContent = data.cargo_description;
+        document.getElementById('modalDeliveryDate').textContent = data.delivery_date;
+        document.getElementById('modalDeliveryTime').textContent = data.delivery_time;
+
+        // Проверка валидности координат
+        const originCoords = data.origin_coordinates.split(',').map(parseFloat);
+        const destinationCoords = data.destination_coordinates.split(',').map(parseFloat);
+
+        if (originCoords.length !== 2 || destinationCoords.length !== 2 || 
+            isNaN(originCoords[0]) || isNaN(originCoords[1]) || 
+            isNaN(destinationCoords[0]) || isNaN(destinationCoords[1])) {
+            console.error('Некорректные координаты маршрута:', {
+                originCoords,
+                destinationCoords,
+            });
+            alert('Некорректные координаты маршрута. Пожалуйста, проверьте данные.');
+            return;
+        }
+        console.log('Координаты отправления:', originCoords);
+        console.log('Координаты назначения:', destinationCoords);
+
+        // Используем Leaflet Routing Machine
+        routeControl = L.Routing.control({
+            waypoints: [
+                L.latLng(originCoords[0], originCoords[1]),
+                L.latLng(destinationCoords[0], destinationCoords[1]),
+            ],
+            routeWhileDragging: false,
+            addWaypoints: false,
+            draggableWaypoints: false,
+            createMarker: function () {
+                return null; // Отключить стандартные маркеры
+            }
+        }).addTo(modalMap);
+
+        modalMap.setView(originCoords, 10); // Центрируем карту на точку отправления
+    })
+    .catch(error => console.error('Ошибка загрузки деталей заказа:', error));
+
+            });
+        });
+    });
+    </script>
+{% endblock %}

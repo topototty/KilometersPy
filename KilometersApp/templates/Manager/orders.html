@@ -1,0 +1,128 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% load django_tables2 %}
+{% block title %}Заказы{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Заказы</h1>
+    <div class="container mt-4">
+ <!-- Форма фильтрации -->
+ <form method="get" class="mb-4">
+    {{ filter.form.as_p }}
+    <div class="d-flex justify-content-between">
+        <div>
+            <button type="submit" class="btn btn-primary">Фильтровать</button>
+            <a href="{% url 'orders' %}" class="btn btn-secondary">Сбросить</a>
+        </div>
+    </div>
+</form>    
+        <!-- Таблица заказов -->
+        {% render_table orders_table %}
+    
+        <!-- Модальное окно для деталей заказа -->
+        <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="orderModalLabel">Детали заказа</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h4 id="modalOrderNumber"></h4>
+                        <p><strong>Адрес отправления:</strong> <span id="modalOriginAddress"></span></p>
+                        <p><strong>Адрес доставки:</strong> <span id="modalDestinationAddress"></span></p>
+                        <p><strong>Ширина груза:</strong> <span id="modalCargoWidth"></span> м</p>
+                        <p><strong>Длина груза:</strong> <span id="modalCargoLength"></span> м</p>
+                        <p><strong>Вес груза:</strong> <span id="modalCargoWeight"></span> т</p>
+                        <p><strong>Описание:</strong> <span id="modalCargoDescription"></span></p>
+                        <p><strong>Дата доставки:</strong> <span id="modalDeliveryDate"></span></p>
+                        <p><strong>Время доставки:</strong> <span id="modalDeliveryTime"></span></p>
+    
+                        <!-- Карта для маршрута -->
+                        <div id="modalMap" style="height: 400px;"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Подключение Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Инициализация карты
+            const map = L.map('modalMap').setView([55.7558, 37.6173], 10); // Координаты Москвы
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 19,
+            }).addTo(map);
+    
+            let routingControl = null;
+    
+            // Добавление событий для ссылок в таблице
+            document.querySelectorAll('.order-detail-link').forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+    
+                    const orderId = link.dataset.orderId;
+    
+                    // Получение данных через AJAX
+                    fetch(`/managment/orders/${orderId}/details/`)
+                        .then(response => response.json())
+                        .then(data => {
+                            // Заполнение модального окна
+                            document.getElementById('modalOrderNumber').textContent = `Заказ №${data.order_number}`;
+                            document.getElementById('modalOriginAddress').textContent = data.origin_address;
+                            document.getElementById('modalDestinationAddress').textContent = data.destination_address;
+                            document.getElementById('modalCargoWidth').textContent = data.cargo_width;
+                            document.getElementById('modalCargoLength').textContent = data.cargo_length;
+                            document.getElementById('modalCargoWeight').textContent = data.cargo_weight;
+                            document.getElementById('modalCargoDescription').textContent = data.cargo_description;
+                            document.getElementById('modalDeliveryDate').textContent = data.delivery_date;
+                            document.getElementById('modalDeliveryTime').textContent = data.delivery_time;
+    
+                            // Очистка предыдущих маршрутов
+                            if (routingControl) {
+                                map.removeControl(routingControl);
+                            }
+    
+                            // Строим маршрут с помощью Leaflet Routing Machine
+                            const originCoords = data.origin_coordinates.split(',').map(parseFloat);
+                            const destinationCoords = data.destination_coordinates.split(',').map(parseFloat);
+    
+                            routingControl = L.Routing.control({
+                                waypoints: [
+                                    L.latLng(originCoords[0], originCoords[1]),
+                                    L.latLng(destinationCoords[0], destinationCoords[1])
+                                ],
+                                routeWhileDragging: false,
+                                lineOptions: {
+                                    styles: [{ color: 'blue', weight: 4, opacity: 0.7 }]
+                                },
+                                createMarker: function (i, waypoint, n) {
+                                    return L.marker(waypoint.latLng, {
+                                        draggable: false
+                                    });
+                                }
+                            }).addTo(map);
+    
+                            // Подгоняем карту под маршрут
+                            routingControl.on('routesfound', function (e) {
+                                const bounds = e.routes[0].bounds;
+                                map.fitBounds(bounds);
+                            });
+                        })
+                        .catch(error => console.error('Ошибка загрузки деталей заказа:', error));
+                });
+            });
+        });
+    </script>
+
+
+    
+    {% endblock %}

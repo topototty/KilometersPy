@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'css/navbarStyle.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap" rel="stylesheet">
+
+    <title>KILO Navbar</title>
+</head>
+<body>
+
+<div class="navbar">
+
+    <div class="logo">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'img/local_shipping.svg' %}" alt="KILO Logo">
+        </a>
+        <a href="{% url 'home' %}" class="logo-text" style="text-decoration: none;">KILO</ф>
+    </div>
+
+    <div class="nav-links">
+        {% if request.user.is_authenticated %}
+            {% for group in request.user.groups.all %}
+                {% if group.name == "Admin" %}
+                    <a href="{% url 'admin_panel' %}">Управление данными</a>
+                    <a href="{% url 'admin_log' %}">Логи</a>
+                    <a href="{% url 'admin_stats' %}">Статистика</a>
+                    <a href="{% url 'backup_list' %}">Бекапы</a>
+                {% endif %}
+                {% if group.name == "Manager" %}
+                    <a href="{% url 'orders' %}">Заказы</a>
+                    <a href="{% url 'route_list' %}">Рейсы</a>
+                    <a href="{% url 'profile' %}">Профиль</a>
+                    <a href="{% url 'admin_panel' %}">Управление данными</a>
+                {% endif %}
+                {% if group.name == "Driver" %}
+                    <a href="{% url 'driver_dashboard' %}">Мои рейсы</a>
+                    <a href="{% url 'profile' %}">Профиль</a>
+                {% endif %}
+                {% if group.name == "User" %}
+                    <a href="{% url 'home' %}">Главная</a>
+                    <a href="{% url 'my_orders' %}">Мои заказы</a>
+                    <a href="{% url 'profile' %}">Профиль</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <div class="profile-section">
+        {% if user.is_authenticated %}
+            <span class="username">{{ request.user.username }}</span>
+            <a href="{% url 'logout' %}" class="logout-btn">Выйти</a>
+        {% else %}
+            <a href="{% url 'reg' %}" class="reg-button">Зарегистрироваться</a>
+            <a href="{% url 'login' %}" class="login-btn">Войти</a>
+        {% endif %}
+    </div>
+</div>
+
+</body>
+</html>

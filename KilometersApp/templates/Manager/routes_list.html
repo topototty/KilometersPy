@@ -1,0 +1,47 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% load django_tables2 %}
+{% block title %}Маршруты{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1>Маршруты</h1>
+
+    <!-- Форма фильтрации -->
+    <form method="get" class="mb-4">
+        {{ filter.form.as_p }}
+        <div class="d-flex justify-content-between">
+            <button type="submit" class="btn btn-primary">Фильтровать</button>
+            <a href="{% url 'route_list' %}" class="btn btn-secondary">Сбросить</a>
+        </div>
+    </form>
+
+    <!-- Таблица маршрутов -->
+    {% render_table table %}
+
+    <!-- Кнопка для добавления нового маршрута -->
+    <button class="btn btn-success mt-4" data-bs-toggle="modal" data-bs-target="#addRouteModal">Добавить маршрут</button>
+
+    <!-- Модальное окно для добавления нового маршрута -->
+    <div class="modal fade" id="addRouteModal" tabindex="-1" aria-labelledby="addRouteModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addRouteModalLabel">Добавить новый маршрут</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+                </div>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        {{ form.as_p }}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                        <button type="submit" class="btn btn-primary">Добавить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
